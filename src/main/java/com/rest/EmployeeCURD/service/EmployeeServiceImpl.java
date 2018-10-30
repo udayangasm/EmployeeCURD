@@ -47,8 +47,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}	
 	
 	public List<Employee> getAllEmployees(){
-		List<Employee> list = new ArrayList<Employee>();
-		employeeRepository.findAll().forEach(e -> list.add(e));
+		List<Employee> list = (List<Employee>) employeeRepository.findAll();
 		return list;
 	}
 
